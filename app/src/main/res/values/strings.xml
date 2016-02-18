@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dự báo thời tiết</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="listcity">Chọn Thành Phố</string>
+	<string name="txtViewListCity">Danh sách tên các thành phố</string>
+	<string name="changeplace">Sửa địa điểm</string>
+	<string name="myplace">Địa điểm của tôi</string>
+	<string name="no_city">Bạn chưa chọn thành phố nào cả!</string>
+	<string name="txt_cityselected">Danh sách thành phố của bạn</string>
+    <string name="action_settings">Setting</string>
+    <string name="city_manager">Quản lý thành phố</string>
+    <string name="setting">Cài đặt</string>
+    <string name="list_city">Thêm thành phố</string>
+    <string name="feedback">Gửi phản hồi</string>
+    <string name="compose">Gửi email</string>
+</resources>

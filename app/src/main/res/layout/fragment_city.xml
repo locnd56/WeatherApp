@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="10.0">
+
+    <!-- Layout 2 chua toan bo thong tin ngay hien tai-->
+
+    <LinearLayout
+        android:id="@+id/Layout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="7.0"
+        android:orientation="vertical"
+        android:weightSum="10.0">
+
+        <!-- Layout 2.1 chua thong tin image, city and date hien tai -->
+
+        <LinearLayout
+            android:id="@+id/Layout2.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            android:weightSum="2.0">
+
+            <!-- Layout 2.1.1 chua hinh anh ngay hien tai -->
+
+            <RelativeLayout
+                android:id="@+id/Layout2.1.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1.0">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right" />
+
+            </RelativeLayout>
+
+            <!-- Layout 2.1.2 chua thong tin ten thanh pho va ngay/gio cap nhat-->
+
+            <LinearLayout
+                android:id="@+id/Layout2.1.2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:id="@+id/txtCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:maxLines="1"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:maxLines="1"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Layout2.2 chua thong tin temperature, humidity and wind hien tai -->
+
+        <LinearLayout
+            android:id="@+id/Layout2.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9.0"
+            android:orientation="vertical"
+            android:weightSum="7.0">
+
+            <!-- Layout 2.2.1 chua thong tin nhiet do hien tai -->
+
+            <LinearLayout
+                android:id="@+id/Layout2.2.1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5.0">
+
+                <com.locnd.weatherapp.view.AutoResizeTextView
+                    android:id="@+id/curTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="400sp" />
+
+            </LinearLayout>
+
+            <!-- Layout chua thong do am va huong gio hien tai && CHUA THONG TIN DESCRIPTION-->
+
+            <LinearLayout
+                android:id="@+id/ll_whdd"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.0"
+                android:orientation="vertical">
+
+                <!-- Layout chua thong tin do am va huong gio hien tai -->
+
+                <LinearLayout
+                    android:id="@+id/Layout2.2.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2.0">
+
+                    <!-- Layout2.2.2.1 chua thong tin hinh anh va do am hien tai -->
+
+                    <LinearLayout
+                        android:id="@+id/Layout2.2.2.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:weightSum="2.0">
+
+                        <ImageView
+                            android:id="@+id/imgWind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/curWind"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:maxLines="1"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Layout2.2.2.2 chua thong tin hinh anh va huong gio hien tai -->
+
+                    <LinearLayout
+                        android:id="@+id/Layout2.2.2.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal"
+                        android:weightSum="2.0">
+
+                        <ImageView
+                            android:id="@+id/imgHumi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end" />
+
+                        <TextView
+                            android:id="@+id/curHumi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <!-- Ket thuc Layout 2.2.2.2 -->
+                </LinearLayout>
+                <!-- Ket thuc Layout 2.2.2 -->
+
+                <!-- Layout hien thi description cua thoi tiet hien tai -->
+
+                <LinearLayout
+                    android:id="@+id/ll_dd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/curDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtcurWind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- Ket thuc Layout hien thi description -->
+            </LinearLayout>
+            <!-- Ket thuc Layout bao gom do am, huong gio va Description -->
+        </LinearLayout>
+        <!-- Ket thuc Layout 2.2 -->
+    </LinearLayout>
+    <!-- Ket thuc Layout 2 -->
+    <!--Su dung thu vien UltimateRecyclerView -->
+    <com.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+        android:id="@+id/ultimate_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.0"
+        android:background="#00000000"
+        app:recyclerviewClipToPadding="true"></com.marshalchen.ultimaterecyclerview.UltimateRecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.locnd.weatherapp">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/kweather"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListCityActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/list_city"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".CityActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".CityManagerAcivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/city_manager"
+            android:parentActivityName="com.locnd.weatherapp.CityActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".SettingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/setting"
+            android:parentActivityName="com.locnd.weatherapp.CityActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/setting"
+            android:screenOrientation="portrait">
+            </activity>
+        <activity
+            android:name=".FeedBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/feedback"
+            android:parentActivityName="com.locnd.weatherapp.CityActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <receiver android:name=".widget.MainWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+        <receiver
+            android:name=".widget.MainWidgetIntentReceiver"
+            android:label="widgetBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.weatherapp.intent.action.RELOAD_WEATHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+    </application>
+
+</manifest>
